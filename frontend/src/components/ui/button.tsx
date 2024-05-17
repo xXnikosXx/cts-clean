@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "text-sm bg-primary text-primary-foreground shadow hover:bg-primary/90",
         none: "",
-        accent: "text-sm bg-p-brand-teal text-white shadow hover:bg-primary/90",
+        accent: "text-sm bg-p-brand-teal text-white shadow hover:bg-primary/90 hover:text-black",
         themeToggle:
           "text-sm border border-input bg-p-neutral-black shadow-sm hover:bg-accent hover:text-accent-foreground",
         destructive:

@@ -23,7 +23,7 @@ import { buttonVariants } from "@/components/ui/button";
 import Preloader from "@/components/Preloader"
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
-import { HomeShowcase } from "@/components/HomeShowcase";
+import { NewsletterSignup } from "@/components/NewsletterSignuo";
 
 
 
@@ -62,7 +62,7 @@ export default function Home() {
       </AnimatePresence>
       <main className="absolute z-10 w-screen">
         {/* Above the Fold */}
-        <div className="flex flex-col xl:flex-row column-2 h-screen items-center">
+        <section className="flex flex-col xl:flex-row column-2 h-screen items-center">
           <div className="text-wrap mx-auto mt-[100px] xl:mt-0 xl:pl-10 flex flex-col justify-start">
             <HeroHighlight>
               <motion.h1
@@ -77,6 +77,7 @@ export default function Home() {
                 transition={{
                   duration: 0.5,
                   ease: [0.4, 0.0, 0.2, 1],
+                  delay: 2.7,
                 }}
                 className="text-2xl md:text-4xl lg:text-6xl font-bold max-w-4xl leading-relaxed lg:leading-snug mb-5"
               >
@@ -87,12 +88,47 @@ export default function Home() {
                 IT <br /> Support and Solutions
               </motion.h1>
             </HeroHighlight>
-            <p className="text-xl mb-10">
+            {/* <p className="text-xl mb-10">
               Partner with us for essential business support, including IT, web{" "}
               <br /> development, brand identity, online advertising on Google{" "}
               <br /> and Social Media, and more...
-            </p>
-            <div className="flex justify-start">
+            </p> */}
+            <motion.p
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: [20, -5, 0],
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0.0, 0.2, 1],
+                delay: 2.7,
+              }}
+              className="text-xl mb-10"
+            >
+              Partner with us for essential business support, including IT, web{" "}
+              <br /> development, brand identity, online advertising on Google{" "}
+              <br /> and Social Media, and more...
+            </motion.p>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: [20, -5, 0],
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0.0, 0.2, 1],
+                delay: 2.7,
+              }}
+              className="flex justify-start"
+            >
               <Link
                 href="/"
                 className={buttonVariants({ variant: "accent" }) + " mr-4"}
@@ -102,9 +138,24 @@ export default function Home() {
               <Link href="/" className={buttonVariants({ variant: "outline" })}>
                 Get in Touch!
               </Link>
-            </div>
+            </motion.div>
           </div>
-          <div className="flex mx-auto">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: [20, -5, 0],
+            }}
+            transition={{
+              duration: 0.5,
+              ease: [0.4, 0.0, 0.2, 1],
+              delay: 2.7,
+            }}
+            className="flex mx-auto"
+          >
             <ContainerScroll titleComponent={<></>}>
               <Image
                 src={`/linear.jpg`}
@@ -115,14 +166,137 @@ export default function Home() {
                 draggable={false}
               />
             </ContainerScroll>
-          </div>
-        </div>
+          </motion.div>
+        </section>
 
         {/* Below the Fold */}
         {/*  */}
+        {/* IT Support Section */}
+        <section className="h-screen">
+          <div className="flex column-2 h-screen items-center">
+            <div className="flex w-[40%] ml-36">
+              <Image
+                src="/it-devices.svg"
+                alt="Technology Illustration"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div className="m-14 text-wrap w-[60%]">
+              <h6>Exceptional</h6>
+              <h1 className="text-6xl font-bold mb-5 leading-tight">
+                Efficient IT Support <br /> Services for Your <br /> Business
+              </h1>
+              <p className="text-xl mb-12">
+                Get reliable IT support for all your business's needs. We are
+                ready to <br /> assist you with any technical issues, ensuring
+                smooth operations and <br /> maximum productivity.
+              </p>
+              <div className="flex column-2 mb-12">
+                <div>
+                  <h4 className="text-2xl font-bold mb-3">Expert Assistance</h4>
+                  <p className="mr-10">
+                    We provide comprehensive IT support solutions tailored to
+                    your business.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-2xl font-bold mb-3">Custom Solutions</h4>
+                  <p className="mr-10">
+                    We offer personalized IT support services to meet your
+                    specific business requirements.
+                  </p>
+                </div>
+              </div>
+              <div className="flex column-2">
+                <Link
+                  href="/"
+                  className={buttonVariants({ variant: "outline" }) + " mr-4"}
+                >
+                  Learn More
+                </Link>
+                <Link
+                  href="/"
+                  className={buttonVariants({ variant: "noOutline" })}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Homepage Services Showcase (Sticky Scroll Reveal Effect) */}
-        <HomeShowcase />
+        {/*  */}
+        {/* More Services Section */}
+        <section className="h-screen">
+          <div className="columns-1 text-center">
+            <h6 className="text-lg font-semibold mb-5">
+              Transform Your Business with Innovative Solutions
+            </h6>
+            <h1 className="text-6xl font-bold mb-10">
+              Customized Solutions for <br /> Your Business
+            </h1>
+            <p className="text-2xl mb-24">
+              At our company, we offer a wide range of services to help
+              businesses <br /> thrive in the digital world. From custom app
+              development to brand <br /> identity and SEO services, we have the
+              expertise to meet all your <br /> needs.
+            </p>
+          </div>
+          <div className="flex text-center mb-12">
+            <div className="p-10">
+              <h2 className="text-3xl font-bold mb-7">
+                Stay Connected Anywhere
+              </h2>
+              <p className="text-lg">
+                Remote Work / Hybrid Solutions: Adapt to the changing work
+                environment and enable your team to work from anywhere with our
+                remote work and hybrid solutions.
+              </p>
+            </div>
+            <div className="p-10">
+              <h2 className="text-3xl font-bold mb-7">
+                Secure Your Online Presence
+              </h2>
+              <p className="text-lg">
+                Automation Solutions: Streamline your business processes and
+                increase efficiency with our automation solutions.
+              </p>
+            </div>
+            <div className="p-10">
+              <h2 className="text-3xl font-bold mb-7">
+                Boost Your Online Visibility
+              </h2>
+              <p className="text-lg">
+                Brand Identity: Stand out from the competition with a unique and
+                memorable brand identity that resonates with your target
+                audience.
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center column-2">
+            <Link
+              href="/"
+              className={
+                buttonVariants({ variant: "outline", size: "xl" }) + " mr-4"
+              }
+            >
+              Learn More
+            </Link>
+            <Link
+              href="/"
+              className={buttonVariants({ variant: "noOutline", size: "xlNB" })}
+            >
+              Contact Us
+            </Link>
+          </div>
+        </section>
+
+        {/*  */}
+        {/* Newsletter Signup Form */}
+        <section className="w-[90vw] relative left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
+          <NewsletterSignup />
+        </section>
       </main>
     </>
   );
