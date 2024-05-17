@@ -122,7 +122,7 @@ export default function Home() {
         {/*  */}
 
         {/* Homepage Services Showcase (Sticky Scroll Reveal Effect) */}
-        {/* <HomeShowcase /> */}
+        <HomeShowcase />
       </main>
     </>
   );
