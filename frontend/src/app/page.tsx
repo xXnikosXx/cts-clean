@@ -60,7 +60,7 @@ export default function Home() {
         {/* Render the `Preloader` component if isLoading is true. */}
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <main className="absolute z-10 w-screen">
+      <main className="relative z-10 w-screen">
         {/* Above the Fold */}
         <section className="flex flex-col xl:flex-row column-2 h-screen items-center">
           <div className="text-wrap mx-auto mt-[100px] xl:mt-0 xl:pl-10 flex flex-col justify-start">
@@ -297,6 +297,74 @@ export default function Home() {
         <section className="w-[90vw] relative left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
           <NewsletterSignup />
         </section>
+
+        {/*  */}
+        {/* Contact Info Section */}
+        <section className="m-16">
+          <div className="mb-24">
+            <h6 className="text-md mb-5">Get in touch!</h6>
+            <h1 className="text-6xl font-bold mb-5">Where to find us:</h1>
+            <p className="text-lg">
+              Have a question or need a quote? Contact us today!
+            </p>
+          </div>
+          <div className="flex ml-32">
+            <div className="flex flex-col flex-1">
+              <div className="flex-1">
+                <h2 className="text-2xl font-semibold mb-3">Email</h2>
+                <p className="text-lg mb-3">Shoot us an email</p>
+                <Link
+                  href="mailto://hello@ctsolutions.gr/"
+                  className={buttonVariants({
+                    variant: "linkTealLg",
+                    size: "none",
+                  })}
+                >
+                  hello@ctsolutions.gr
+                </Link>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-semibold mb-3">Phone</h2>
+                <p className="text-lg mb-3">Give us a call</p>
+                <Link
+                  href="tel://00302105621995"
+                  className={buttonVariants({
+                    variant: "linkTealLg",
+                    size: "none",
+                  })}
+                >
+                  (30)210-56-21-995
+                </Link>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-semibold mb-3">Office</h2>
+                <p className="text-lg mb-3">
+                  Andrea Dimitriou 19, Agia Varvara,
+                  <br /> 12351, Attica, GR
+                </p>
+                <Link
+                  href=""
+                  className={buttonVariants({
+                    variant: "linkTealLg",
+                    size: "none",
+                  })}
+                >
+                  Open map
+                </Link>
+              </div>
+            </div>
+            <div className="flex-1">
+              <Image
+                src="/placeholder.png"
+                alt="placeholder image"
+                width={832}
+                height={516}
+              />
+            </div>
+          </div>
+        </section>
+
+        
       </main>
     </>
   );

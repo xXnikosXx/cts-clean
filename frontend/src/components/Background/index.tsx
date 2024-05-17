@@ -29,14 +29,14 @@ export const DotsMotionBackground = ({
   return (
     <div
       className={cn(
-        "relative h-screen bg-s-bg-primary w-full group",
+        "relative bg-s-bg-primary w-full group",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
     >
-      <div className="h-[5000px] absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none" />
+      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none" />
       <motion.div
-        className="h-[5000px] pointer-events-none bg-dot-thick-teal-500 dark:bg-dot-thick-teal-500 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none bg-dot-thick-teal-500 dark:bg-dot-thick-teal-500 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(

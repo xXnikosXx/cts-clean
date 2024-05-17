@@ -51,7 +51,7 @@ export default async function RootLayout({
             {/* <div className="h-[70px]"></div> */}
             {children}
           </DotsMotionBackground>
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
