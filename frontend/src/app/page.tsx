@@ -60,7 +60,7 @@ export default function Home() {
         {/* Render the `Preloader` component if isLoading is true. */}
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <main className="relative z-10 w-screen">
+      <main className="relative z-10">
         {/* Above the Fold */}
         <section className="flex flex-col xl:flex-row column-2 h-screen items-center">
           <div className="text-wrap mx-auto mt-[100px] xl:mt-0 xl:pl-10 flex flex-col justify-start">
@@ -172,9 +172,9 @@ export default function Home() {
         {/* Below the Fold */}
         {/*  */}
         {/* IT Support Section */}
-        <section className="h-screen">
-          <div className="flex column-2 h-screen items-center">
-            <div className="flex w-[40%] ml-36">
+        <section className="mb-32">
+          <div className="flex column-2 items-center">
+            <div className="flex w-[50%] ml-36">
               <Image
                 src="/it-devices.svg"
                 alt="Technology Illustration"
@@ -182,7 +182,7 @@ export default function Home() {
                 height={600}
               />
             </div>
-            <div className="m-14 text-wrap w-[60%]">
+            <div className="m-14 text-wrap w-[50%]">
               <h6>Exceptional</h6>
               <h1 className="text-6xl font-bold mb-5 leading-tight">
                 Efficient IT Support <br /> Services for Your <br /> Business
@@ -228,7 +228,7 @@ export default function Home() {
 
         {/*  */}
         {/* More Services Section */}
-        <section className="h-screen">
+        <section className="mb-32">
           <div className="columns-1 text-center">
             <h6 className="text-lg font-semibold mb-5">
               Transform Your Business with Innovative Solutions
@@ -244,7 +244,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex text-center mb-12">
-            <div className="p-10">
+            <div className="p-10 basis-1/3">
               <h2 className="text-3xl font-bold mb-7">
                 Stay Connected Anywhere
               </h2>
@@ -254,7 +254,7 @@ export default function Home() {
                 remote work and hybrid solutions.
               </p>
             </div>
-            <div className="p-10">
+            <div className="p-10 basis-1/3">
               <h2 className="text-3xl font-bold mb-7">
                 Secure Your Online Presence
               </h2>
@@ -263,7 +263,7 @@ export default function Home() {
                 increase efficiency with our automation solutions.
               </p>
             </div>
-            <div className="p-10">
+            <div className="p-10 basis-1/3">
               <h2 className="text-3xl font-bold mb-7">
                 Boost Your Online Visibility
               </h2>
@@ -294,13 +294,13 @@ export default function Home() {
 
         {/*  */}
         {/* Newsletter Signup Form */}
-        <section className="w-[90vw] relative left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
+        <section className="mb-32 w-[90vw] relative left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
           <NewsletterSignup />
         </section>
 
         {/*  */}
         {/* Contact Info Section */}
-        <section className="m-16">
+        <section className="p-16">
           <div className="mb-24">
             <h6 className="text-md mb-5">Get in touch!</h6>
             <h1 className="text-6xl font-bold mb-5">Where to find us:</h1>

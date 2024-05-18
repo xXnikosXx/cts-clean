@@ -24,7 +24,7 @@ import {
 export default function Footer() {
   return (
     <footer>
-      <div className="flex">
+      <div className="flex pt-5">
         <div className="flex-1 flex justify-center items-start">
           <Image src="/logo.png" alt="logo" width={127} height={55} />
         </div>
