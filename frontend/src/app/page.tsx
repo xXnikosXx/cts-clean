@@ -25,7 +25,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { NewsletterSignup } from "@/components/NewsletterSignuo";
 import { HomeMeteorsCard } from "@/components/MeteorsCard";
-import { Map } from "@/components/Mao";
+import { Map } from "@/components/Map";
 
 
 
@@ -76,7 +76,7 @@ export default function Home() {
       <main className="relative z-10">
         {/* Above the Fold */}
         <section className="flex flex-col xl:flex-row column-2 h-screen items-center">
-          <div className="text-wrap mx-auto mt-[100px] xl:mt-0 xl:pl-10 flex flex-col justify-start">
+          <div className="text-wrap mx-auto mt-[200px] xl:mt-0 xl:pl-10 flex flex-col justify-start">
             <HeroHighlight>
               <motion.h1
                 initial={{
@@ -92,7 +92,7 @@ export default function Home() {
                   ease: [0.4, 0.0, 0.2, 1],
                   delay: 2.7,
                 }}
-                className="text-2xl md:text-4xl lg:text-6xl font-bold max-w-4xl leading-relaxed lg:leading-snug mb-5"
+                className="pl-10 lg:pl-0 text-4xl lg:text-5xl font-bold max-w-4xl leading-normal lg:leading-snug mb-5"
               >
                 Delivering <br />
                 <Highlight className="text-black dark:text-white">
@@ -120,7 +120,7 @@ export default function Home() {
                 ease: [0.4, 0.0, 0.2, 1],
                 delay: 2.7,
               }}
-              className="text-xl mb-10"
+              className="px-10 lg:px-0 text-xl mb-10"
             >
               Partner with us for essential business support, including IT, web{" "}
               <br /> development, brand identity, online advertising on Google{" "}
@@ -140,7 +140,7 @@ export default function Home() {
                 ease: [0.4, 0.0, 0.2, 1],
                 delay: 2.7,
               }}
-              className="flex justify-start"
+              className="px-10 lg:px-0 flex justify-start"
             >
               <Link
                 href="/"
@@ -167,7 +167,7 @@ export default function Home() {
               ease: [0.4, 0.0, 0.2, 1],
               delay: 2.7,
             }}
-            className="flex mx-auto"
+            className="flex mx-auto relative top-[-220px] xl:top-0"
           >
             <ContainerScroll titleComponent={<></>}>
               <Image
@@ -182,26 +182,27 @@ export default function Home() {
           </motion.div>
         </section>
 
+        <div className="h-[400px] md:h-[500px] xl:hidden"></div>
         {/* Below the Fold */}
         {/*  */}
         {/* IT Support Section */}
         <section className="mb-32">
-          <div className="flex column-2 items-center">
-            <div className="w-[50%] flex justify-center">
+          <div className="flex column-2 items-center flex-col-reverse lg:flex-row">
+            <div className="lg:w-[50%] w-full flex justify-center">
               <HomeMeteorsCard />
             </div>
-            <div className="m-14 text-wrap w-[50%]">
+            <div className="m-14 text-wrap w-[90%] lg:w-[50%]">
               <h6>Exceptional</h6>
-              <h1 className="text-6xl font-bold mb-5 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-5 leading-tight">
                 Efficient IT Support <br /> Services for Your <br /> Business
               </h1>
-              <p className="text-xl mb-12">
+              <p className="text-lg lg:text-2xl mb-12">
                 Get reliable IT support for all your business's needs. We are
                 ready to <br /> assist you with any technical issues, ensuring
                 smooth operations and <br /> maximum productivity.
               </p>
-              <div className="flex column-2 mb-12">
-                <div>
+              <div className="flex flex-col md:flex-row column-2 mb-12">
+                <div className="mb-10 md:mb-0">
                   <h4 className="text-2xl font-bold mb-3">Expert Assistance</h4>
                   <p className="mr-10">
                     We provide comprehensive IT support solutions tailored to
@@ -234,48 +235,49 @@ export default function Home() {
           </div>
         </section>
 
+        {/* <div className="h-[500px] xl:hidden"></div> */}
         {/*  */}
         {/* More Services Section */}
         <section className="mb-32">
-          <div className="columns-1 text-center">
+          <div className="columns-1 text-center p-10 lg:p-0">
             <h6 className="text-lg font-semibold mb-5">
               Transform Your Business with Innovative Solutions
             </h6>
-            <h1 className="text-6xl font-bold mb-10">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-10">
               Customized Solutions for <br /> Your Business
             </h1>
-            <p className="text-2xl mb-24">
+            <p className="text-lg lg:text-2xl lg:mb-24">
               At our company, we offer a wide range of services to help
               businesses <br /> thrive in the digital world. From custom app
               development to brand <br /> identity and SEO services, we have the
               expertise to meet all your <br /> needs.
             </p>
           </div>
-          <div className="flex text-center mb-12">
-            <div className="p-10 basis-1/3">
-              <h2 className="text-3xl font-bold mb-7">
+          <div className="flex flex-col lg:flex-row text-center mb-12">
+            <div className="px-10 xl:py-10 basis-1/3">
+              <h2 className="text-xl lg:text-3xl font-bold mb-2 xl:mb-7">
                 Stay Connected Anywhere
               </h2>
-              <p className="text-lg">
+              <p className="text-md lg:text-lg mb-7 xl:mb-0">
                 Remote Work / Hybrid Solutions: Adapt to the changing work
                 environment and enable your team to work from anywhere with our
                 remote work and hybrid solutions.
               </p>
             </div>
-            <div className="p-10 basis-1/3">
-              <h2 className="text-3xl font-bold mb-7">
+            <div className="px-10 xl:py-10 basis-1/3">
+              <h2 className="text-xl lg:text-3xl font-bold mb-2 xl:mb-7">
                 Secure Your Online Presence
               </h2>
-              <p className="text-lg">
+              <p className="text-md lg:text-lg mb-7 xl:mb-0">
                 Automation Solutions: Streamline your business processes and
                 increase efficiency with our automation solutions.
               </p>
             </div>
-            <div className="p-10 basis-1/3">
-              <h2 className="text-3xl font-bold mb-7">
+            <div className="px-10 xl:py-10 basis-1/3">
+              <h2 className="text-xl lg:text-3xl font-bold mb-2 xl:mb-7">
                 Boost Your Online Visibility
               </h2>
-              <p className="text-lg">
+              <p className="text-md lg:text-lg">
                 Brand Identity: Stand out from the competition with a unique and
                 memorable brand identity that resonates with your target
                 audience.
@@ -302,7 +304,7 @@ export default function Home() {
 
         {/*  */}
         {/* Newsletter Signup Form */}
-        <section className="mb-32 w-[90vw] relative left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
+        <section className="relative mb-32 w-[90vw] left-[5vw] border-4 border-p-brand-grey bg-s-bg-primary">
           <NewsletterSignup />
         </section>
 
@@ -311,12 +313,14 @@ export default function Home() {
         <section className="p-16">
           <div className="mb-24">
             <h6 className="text-md mb-5">Get in touch!</h6>
-            <h1 className="text-6xl font-bold mb-5">Where to find us:</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-5">
+              Where <br className="md:hidden" /> to find us:
+            </h1>
             <p className="text-lg">
               Have a question or need a quote? Contact us today!
             </p>
           </div>
-          <div className="flex ml-32">
+          <div className="flex flex-col xl:flex-row">
             <div className="flex flex-col flex-1">
               <div className="flex-1">
                 <h2 className="text-2xl font-semibold mb-3">Email</h2>
@@ -369,7 +373,6 @@ export default function Home() {
 
         {/*  */}
         {/* Circle Container */}
-        
       </main>
     </>
   );
