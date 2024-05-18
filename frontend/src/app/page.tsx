@@ -2,12 +2,12 @@
 
 // * React Imports
 import React from "react";
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 
 
 // * Framer Motion Imports
 import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 
 // * Next Imports
@@ -25,6 +25,7 @@ import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { NewsletterSignup } from "@/components/NewsletterSignuo";
 import { HomeMeteorsCard } from "@/components/MeteorsCard";
+import { Map } from "@/components/Mao";
 
 
 
@@ -53,6 +54,17 @@ export default function Home() {
       }
     )()
   }, [])
+
+
+  // ? Code below used for circle container (see before footer)
+
+      const container = useRef(null);
+      const { scrollYProgress } = useScroll({
+        target: container,
+
+        offset: ["start end", "end start"],
+      });
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);;
 
   return (
     <>
@@ -176,7 +188,7 @@ export default function Home() {
         <section className="mb-32">
           <div className="flex column-2 items-center">
             <div className="w-[50%] flex justify-center">
-              <HomeMeteorsCard/>
+              <HomeMeteorsCard />
             </div>
             <div className="m-14 text-wrap w-[50%]">
               <h6>Exceptional</h6>
@@ -350,16 +362,13 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1">
-              <Image
-                src="/placeholder.png"
-                alt="placeholder image"
-                width={832}
-                height={516}
-              />
+              <Map />
             </div>
           </div>
         </section>
 
+        {/*  */}
+        {/* Circle Container */}
         
       </main>
     </>
