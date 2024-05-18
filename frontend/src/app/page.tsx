@@ -24,6 +24,7 @@ import Preloader from "@/components/Preloader"
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import { NewsletterSignup } from "@/components/NewsletterSignuo";
+import { HomeMeteorsCard } from "@/components/MeteorsCard";
 
 
 
@@ -174,13 +175,8 @@ export default function Home() {
         {/* IT Support Section */}
         <section className="mb-32">
           <div className="flex column-2 items-center">
-            <div className="flex w-[50%] ml-36">
-              <Image
-                src="/it-devices.svg"
-                alt="Technology Illustration"
-                width={600}
-                height={600}
-              />
+            <div className="w-[50%] flex justify-center">
+              <HomeMeteorsCard/>
             </div>
             <div className="m-14 text-wrap w-[50%]">
               <h6>Exceptional</h6>
