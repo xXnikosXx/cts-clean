@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col md:flex-row flex-wrap pt-5 md:ml-10">
-        <div className="hidden md:flex lg:hidden xl:flex flex-1 justify-center items-start">
+        <div className="flex flex-1 justify-center items-start mb-10">
           <Image src="/logo.png" alt="logo" width={127} height={55} />
         </div>
         <div className="flex flex-1 flex-col items-center md:items-start mb-5 md:mb-0 xl:ml-10">
@@ -169,43 +169,43 @@ export default function Footer() {
         <div className="hidden xl:flex justify-self-end flex-wrap justify-end items-center mr-5">
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaWhatsapp
-              className="text-3xl 2xl:text-4xl ml-1 text-[#25D366] grayscale hover:grayscale-0"
+              className="text-3xl 2xl:text-4xl ml-1 text-[#25D366] dark:grayscale dark:hover:grayscale-0"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaXTwitter
-              className="text-3xl 2xl:text-4xl ml-1 text-p-neutral-light hover:text-p-neutral-white"
+              className="text-3xl 2xl:text-4xl ml-1 text-p-neutral-light dark:hover:text-p-neutral-white"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaInstagram
-              className="text-3xl 2xl:text-4xl ml-1 fill-ig grayscale hover:grayscale-0"
+              className="text-3xl 2xl:text-4xl ml-1 fill-ig dark:grayscale dark:hover:grayscale-0"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaThreads
-              className="text-3xl 2xl:text-4xl ml-1 text-p-neutral-light hover:text-p-neutral-white"
+              className="text-3xl 2xl:text-4xl ml-1 text-p-neutral-light dark:hover:text-p-neutral-white"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaYoutube
-              className="text-3xl 2xl:text-4xl ml-1 text-[#FF0000] grayscale hover:grayscale-0"
+              className="text-3xl 2xl:text-4xl ml-1 text-[#FF0000] dark:grayscale dark:hover:grayscale-0"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaFacebookMessenger
-              className="text-3xl 2xl:text-4xl ml-1  fill-fm grayscale hover:grayscale-0"
+              className="text-3xl 2xl:text-4xl ml-1  fill-fm dark:grayscale dark:hover:grayscale-0"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
           <Link href="/" className={buttonVariants({ variant: "none" })}>
             <FaViber
-              className="text-3xl 2xl:text-4xl ml-1 text-[#7360f2] grayscale hover:grayscale-0"
+              className="text-3xl 2xl:text-4xl ml-1 text-[#7360f2] dark:grayscale dark:hover:grayscale-0"
               style={{ transition: "filter 0.2s" }}
             />
           </Link>
